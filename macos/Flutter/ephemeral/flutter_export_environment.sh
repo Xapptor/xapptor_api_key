@@ -1,7 +1,7 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
 export "FLUTTER_ROOT=/Users/javiergarcia/Documents/flutter"
-export "FLUTTER_APPLICATION_PATH=/Users/javiergarcia/Documents/Xtr/xapptor_modules/xapptor_api_key"
+export "FLUTTER_APPLICATION_PATH=/Users/javiergarcia/Documents/xtrdcs/xtr/modules/xapptor_api_key"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=0.0.1"
