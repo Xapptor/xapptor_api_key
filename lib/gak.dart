@@ -6,19 +6,10 @@ Future<String> gak({
   required String n,
   required String o,
 }) async {
-  DocumentSnapshot o_m =
-      await FirebaseFirestore.instance.collection("metadata").doc(o).get();
+  DocumentSnapshot o_m = await FirebaseFirestore.instance.collection("metadata").doc(o).get();
   Map<String, dynamic> o_d = o_m.data() as Map<String, dynamic>;
   String ak = "";
-  String p_n = "";
-
-  if (UniversalPlatform.isAndroid) {
-    p_n = "android";
-  } else if (UniversalPlatform.isIOS) {
-    p_n = "ios";
-  } else if (UniversalPlatform.isWeb) {
-    p_n = "web";
-  }
+  String p_n = UniversalPlatform.operatingSystem.toString();
 
   ak = o_d["keys"][n][p_n];
 
@@ -28,6 +19,5 @@ Future<String> gak({
       k: e_k_au,
     );
   }
-
   return ak;
 }
