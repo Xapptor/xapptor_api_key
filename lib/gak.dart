@@ -8,17 +8,21 @@ Future<String> gak({
   required String o,
 }) async {
   DocumentSnapshot o_m = await XapptorDB.instance.collection("metadata").doc(o).get();
-  Map<String, dynamic> o_d = o_m.data() as Map<String, dynamic>;
   String ak = "";
-  String p_n = UniversalPlatform.operatingSystem.toString();
 
-  ak = o_d["keys"][n][p_n];
+  if (o_m.data() != null) {
+    Map<String, dynamic> o_d = o_m.data() as Map<String, dynamic>;
 
-  if (d_m_f_au != null) {
-    ak = d_m_f_au!(
-      m: ak,
-      k: e_k_au,
-    );
+    String p_n = UniversalPlatform.operatingSystem.toString();
+
+    ak = o_d["keys"][n][p_n];
+
+    if (d_m_f_au != null) {
+      ak = d_m_f_au!(
+        m: ak,
+        k: e_k_au,
+      );
+    }
   }
   return ak;
 }
