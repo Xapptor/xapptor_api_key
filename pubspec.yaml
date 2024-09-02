@@ -1,5 +1,6 @@
 name: xapptor_api_key
 description: A new Flutter package project.
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 version: 0.0.1
 
 environment:
@@ -11,6 +12,9 @@ dependencies:
     
   cloud_firestore: ^5.3.0
   universal_platform: ^1.1.0
+
+  xapptor_db:
+    path: ../xapptor_db
 
 dev_dependencies:
   flutter_test:
