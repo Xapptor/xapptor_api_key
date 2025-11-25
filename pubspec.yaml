@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
     
-  cloud_firestore: ^5.6.7
+  cloud_firestore: ^6.1.0
   universal_platform: ^1.1.0
 
   xapptor_db:
